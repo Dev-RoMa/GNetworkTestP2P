@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://accesorios/scenes/player/Sub_one.tscn" type="PackedScene" id=1]
+
+[node name="game" type="Spatial"]
+
+[node name="Sub_one" parent="." instance=ExtResource( 1 )]

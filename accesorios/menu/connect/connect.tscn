@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://accesorios/menu/connect/connect.gd" type="Script" id=1]
+
+[node name="connect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="connect_server" type="Button" parent="."]
+margin_left = 438.0
+margin_top = 229.0
+margin_right = 580.0
+margin_bottom = 264.0
+text = "Connect Server"
+
+[node name="create_server" type="Button" parent="."]
+margin_left = 438.0
+margin_top = 296.0
+margin_right = 580.0
+margin_bottom = 331.0
+text = "Create Server"
+
+[node name="button_back" type="Button" parent="."]
+margin_left = 106.0
+margin_top = 507.0
+margin_right = 248.0
+margin_bottom = 542.0
+text = "BACK"
+
+[connection signal="pressed" from="connect_server" to="." method="_on_connect_server_pressed"]
+[connection signal="pressed" from="create_server" to="." method="_on_create_server_pressed"]
+[connection signal="pressed" from="button_back" to="." method="_on_button_back_pressed"]
