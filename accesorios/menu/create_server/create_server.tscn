@@ -96,9 +96,15 @@ margin_top = 293.0
 margin_right = 635.0
 margin_bottom = 327.0
 
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 5.0
+one_shot = true
+
 [connection signal="pressed" from="button_server_connect" to="." method="_on_button_server_connect_pressed"]
 [connection signal="pressed" from="button_server_status" to="." method="_on_button_server_status_pressed"]
 [connection signal="pressed" from="button_server_clients" to="." method="_on_button_server_clients_pressed"]
 [connection signal="pressed" from="button_server_stop" to="." method="_on_button_server_stop_pressed"]
 [connection signal="pressed" from="button_current_ip" to="." method="_on_button_current_ip_pressed"]
 [connection signal="pressed" from="button_back" to="." method="_on_button_back_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
